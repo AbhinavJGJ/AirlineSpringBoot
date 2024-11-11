@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+</head>
+<body>
+<h1 style="background-color:green">AIRLINE</h1>
+<br>
+<span>Welcome, <h1 th:text="${User}">Welcome, User</h1></span>
+<h1 STYLE="background-color: green">AVAILABLE FLIGHTS</h1>
+<br>
+
+<div th:each="flight:${flights}" style="border:1px solid black" >
+  <h2>flightnumber<span th:text="${flight.flightNumber}"></span></h2><br>
+  <div>DepartureTime<span th:text="${flight.departureTime}"></span></div><br>
+  <div>DepartureTime<span th:text="${flight.status}"></span></div><br>
+
+
+</div><br>
+<h1 style="background-color:green">BOOK YOUR FLIGHT</h1>
+<br>
+<div style="display:flex; justify-content:center;" >
+  <form action="/bookFlight" method="post">
+
+    <label>username</label>
+
+    <input type="text" id="username" name="username">
+    <label>flightNumber</label>
+    <input type="text" id="flightNumber" name="flightNumber">
+    <label>departureTime</label>
+    <input type="datetime-local" id="departureTime" name="departureTime"><br>
+    <button type="submit" style="background-color:blue">bookFlight</button>
+
+
+  </form>
+</div>
+
+
+</body>
+</html>

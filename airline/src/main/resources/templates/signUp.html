@@ -1,0 +1,30 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+</head>
+<body>
+<h1 style="background-color:green">AIRLINE</h1>
+<div style="display:flex; justify-content:center;">
+    <form action="/userSignIn" method="post" style="border: 1px solid black ; padding:10px">
+
+        <label>Username</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label>Password</label>
+        <input type="password" id="password" name="password">
+        <label>Role</label>
+        <select id="role" name="role" required>
+            <option value="">Select role</option>
+
+            <option value="User">user</option>
+        </select>
+
+        <button type="submit" style="background-color:blue;margin-left:30px">SingUp</button>
+
+
+    </form>
+</div>
+
+</body>
+</html>

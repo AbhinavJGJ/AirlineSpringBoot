@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+</head>
+<body>
+<h1 style="background-color:green">AIRLINE</h1>
+<h1>Welcome,<span th:text="${username}"></span> !</h1>
+<h2 style="background-color:green">
+    WANT TO ADD FLIGHTS
+</h2>
+<form action="/flightPage" method="get">
+    <div th:each="flight:${flights}" style="border:1px solid black" >
+        <h2>flightnumber<span th:text="${flight.flightNumber}"></span></h2><br>
+        <div>DepartureTime<span th:text="${flight.departureTime}"></span></div><br>
+        <div>DepartureTime<span th:text="${flight.status}"></span></div><br>
+        <button>Add flight</button><br>
+    </div><br>
+    <button>addFlight</button>
+
+</form><br>
+<h2 style="background-color:green">DELAY A FLIGHT</h2><br>
+<form action="delayFlight" method="post">
+    <label>
+        Enter flight number
+    </label>
+    <input type="text" id="flight" name="flight">
+    <button type="submit"></button>

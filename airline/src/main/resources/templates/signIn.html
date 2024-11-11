@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SignIn</title>
+</head>
+<body>
+<h1 style="background-color:green">AIRLINE</h1>
+<div th:text="${wrongCred}">wrongCred</div>
+<div style="display:flex; justify-content:center;">
+    <form action="/userPage" method="post"  style="border: 1px solid black ; padding:10px">
+        <label>Username</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label>Password</label>
+        <input type="text" id="password" name="password"><br><br>
+        <label>Role</label>
+        <input type="text" id="role" name="role"><br><br>
+        <button type="submit" style="background-color:blue;margin-left:30px">SignIn</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

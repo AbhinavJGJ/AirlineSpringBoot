@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddFlight</title>
+</head>
+<body>
+<h1 style="background-color:green">AirLine</h1>
+<div style="display:flex; justify-content:center;">
+
+    <form action="/addFlight" method="post" style="border: 1px solid black ; padding:10px">
+
+        <label>flightNumber</label>
+        <input type="text" id="flightNumber" name="flightNumber"><br><br>
+        <label>departuretime</label>
+        <input type="datetime-local" id="departureTime" name="departureTime"><br><br>
+        <label>Status</label>
+        <input type="text" id="status" name="status"><br><br>
+        <button type="submit" style="background-color:blue">Add Flight</button>
+
+    </form>
+</div>
+
+</body>
+</html>
